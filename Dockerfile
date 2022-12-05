@@ -4,6 +4,7 @@ WORKDIR application
 #ARG JAR_FILE=./build/libs/babymap-0.0.1-SNAPSHOT.jar
 ARG JAR_FILE=./build/libs/*.jar
 # JAR 파일 메인 디렉토리에 복사
+#COPY ${JAR_FILE} app.jar
 COPY ${JAR_FILE} application.jar
 # 시스템 진입점 정의 
 #ENTRYPOINT ["java","-jar","/app.jar"]
