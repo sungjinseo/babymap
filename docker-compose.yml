@@ -1,0 +1,12 @@
+version: '3'
+services:
+  portainer:
+    image: sjseo85/babymap:latest
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  default:
+    name: nginx-proxy-manager
+    external: true
